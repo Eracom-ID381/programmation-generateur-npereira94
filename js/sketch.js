@@ -16,6 +16,8 @@ function draw() {
     /*generator(width / 2, height / 2, height - 150);*/
   }
   tronc(width / 2, height / 2, 10);
+  feuille(200, height / 20, 100);
+
 }
 
 function tronc(x, y, size) {
@@ -23,6 +25,15 @@ function tronc(x, y, size) {
     noStroke();
     fill(random(0, 250), (0, 200), (0, 10));
     rect(x, y, 50, 400);
+
+  }
+}
+
+function feuille(x, y, size, size) {
+  for (let offset = size; offset > 0; offset -= 10) {
+    noStroke();
+    fill(random(0, 250), (0, 200));
+    triangle(300, 75, 58, 20, 86, 750);
 
   }
 }
