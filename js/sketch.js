@@ -4,7 +4,7 @@
 let timer = 1;
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight, WEBGL);
+  createCanvas(window.innerWidth, window.innerHeight);
   rectMode(CENTER);
 }
 
@@ -15,10 +15,10 @@ function draw() {
     // Appel de notre fonction generator
     generator(width / 2, height / 2, height - 150);
   }
-
+  tronc(width / 2, height / 2, 10, 90);
 }
 
-function tronc(x, y, size, largeur) {
+function tronc(x, y, longueur, largeur) {
   fill(230);
   rect(x, y, 50, 200);
 }
@@ -26,8 +26,8 @@ function tronc(x, y, size, largeur) {
 function generator(x, y, size) {
   // fill utilise le paramètre de notre fonction
   for (let offset = size; offset > 0; offset -= 10) {
-    stroke(random(0, 250), (0, 200), (0, 10));
-    sphere(40, offset);
+    fill(random(0, 250), (0, 200), (0, 10));
+    rect(x, y, 100, offset);
     console.log(offset);
   }
 }
