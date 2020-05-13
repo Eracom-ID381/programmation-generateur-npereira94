@@ -20,41 +20,31 @@ function draw() {
 
 }
 
-/*
-function tronc(x, y, size) {
-  for (let offset = size; offset > 0; offset -= 10) {
-    noStroke();
-    fill(random(0, 250), (0, 200), (0, 10));
-    rect(x, y, 50, 400);
 
-  }
-}
-
-function feuille(x, y, size, size) {
-  for (let offset = size; offset > 0; offset -= 10) {
-    noStroke();
-    fill(random(0, 250), (0, 200));
-    triangle(300, 75, 58, 20, 86, 750);
-
-  }
-}
-  */
 // Fonction avec quatres paramètres
 function generator(x, y, size) {
   // fill utilise le paramètre de notre fonction
-  for (let offset = size; offset > 0; offset -= 10) {
-    fill(250);
-    noStroke();
-    fill(222, 184, 135);
-    rect(width / 2, height / 2, 20, 500);
-    fill(0, 100, 0);
+  //for (let offset = size; offset > 0; offset -= 10) {
 
-    //noStroke();
-    noStroke();
-    ellipse(width / 2, 30, 20, 80);
+  //tronc
+  noStroke();
+  fill(222, 184, 135);
+  rect(width / 2, height / 2, 50, 500);
 
-    console.log(offset);
+
+  //feuille
+  fill(0, 100, 0);
+  translate(580, 200);
+  noStroke();
+  for (var i = 0; i < 10; i++) {
+    ellipse(width / 2, 180, 500, 50);
+    rotate(PI / 45);
   }
+
+
+
+
+  //  }
 }
 
 
