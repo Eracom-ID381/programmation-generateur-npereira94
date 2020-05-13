@@ -45,15 +45,14 @@ function generator(x, y, size) {
   for (let offset = size; offset > 0; offset -= 10) {
     fill(250);
     noStroke();
-    rect(566, 200, 20, 500);
+    fill(222, 184, 135);
+    rect(width / 2, height / 2, 20, 500);
     fill(0, 100, 0);
-    translate(580, 200);
+
     //noStroke();
     noStroke();
-    for (var i = 0; i < 10; i++) {
-      ellipse(0, 30, 20, 80);
-      rotate(PI / 5);
-    }
+    ellipse(width / 2, 30, 20, 80);
+
     console.log(offset);
   }
 }
