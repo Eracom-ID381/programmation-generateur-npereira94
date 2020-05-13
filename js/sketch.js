@@ -29,7 +29,11 @@ function generator(x, y, size) {
   noStroke();
   fill(120, 42, 42);
   triangle(width / 2, 300, 700, 800, 780, 800);
-
+  //coco
+  noStroke();
+  fill(120, 42, 42);
+  ellipse(800, 380, 70, 70);
+  ellipse(850, 380, 80, 80);
   //feuille
   fill(0, 100, 0);
   translate(width / 2, 200);
@@ -39,11 +43,7 @@ function generator(x, y, size) {
     ellipse(0, 30, 400, 80);
     rotate(PI / 5);
   }
-  //coco
-  noStroke();
-  fill(120, 42, 42);
-  ellipse(60, 150, 80, 80);
-  ellipse(-30, 150, 80, 80);
+
 
 }
 
