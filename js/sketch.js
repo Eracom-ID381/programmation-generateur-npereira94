@@ -25,11 +25,10 @@ function draw() {
 function generator(x, y, size) {
   // fill utilise le paramètre de notre fonction
 
-
   //tronc
   noStroke();
   fill(120, 42, 42);
-  rect(width / 2, height / 2, 50, 500);
+  triangle(width / 2, 300, 700, 800, 780, 800);
 
   //feuille
   fill(0, 100, 0);
@@ -40,6 +39,11 @@ function generator(x, y, size) {
     ellipse(0, 30, 400, 80);
     rotate(PI / 5);
   }
+  //coco
+  noStroke();
+  fill(120, 42, 42);
+  ellipse(60, 150, 80, 80);
+  ellipse(-30, 150, 80, 80);
 
 }
 
