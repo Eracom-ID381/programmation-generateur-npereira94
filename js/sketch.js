@@ -9,17 +9,18 @@ function setup() {
 }
 
 function draw() {
-  // Conditionellle nous permettant de savoir si la souris est appuyée
+
+  //Conditionellle nous permettant de savoir si la souris est appuyée
   // et si le timer est écoulé
   if (frameCount % (timer * 60) == 0 && !mouseIsPressed) {
     // Appel de notre fonction generator
-    /*generator(width / 2, height / 2, height - 150);*/
+    generator(width / 2, height / 2, height - 150);
   }
-  tronc(width / 2, height / 2, 10);
-  feuille(200, height / 20, 100);
+
 
 }
 
+/*
 function tronc(x, y, size) {
   for (let offset = size; offset > 0; offset -= 10) {
     noStroke();
@@ -37,16 +38,27 @@ function feuille(x, y, size, size) {
 
   }
 }
+  */
 // Fonction avec quatres paramètres
-/*function generator(x, y, size) {
+function generator(x, y, size) {
   // fill utilise le paramètre de notre fonction
   for (let offset = size; offset > 0; offset -= 10) {
-    fill(random(0, 250), (0, 200), (0, 10));
-    rect(x, y, offset, 300);
+    fill(250);
+    noStroke();
+    rect(566, 200, 20, 500);
+    fill(0, 100, 0);
+    translate(580, 200);
+    //noStroke();
+    noStroke();
+    for (var i = 0; i < 10; i++) {
+      ellipse(0, 30, 20, 80);
+      rotate(PI / 5);
+    }
     console.log(offset);
   }
 }
-*/
+
+
 function mousePressed() {
   // Fonction de librairie P5 nous permettant de sauvegarder une image du canvas
   save();
