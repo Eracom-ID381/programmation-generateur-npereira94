@@ -15,7 +15,7 @@ function draw() {
   if (frameCount % (timer * 60) == 0 && !mouseIsPressed) {
     // Appel de notre fonction generator
     background(255);
-    generator(random(0, 300), height - 150, random(0, 255), width - 300);
+    generator(random(0, 200), height - 150, random(0, 255), random(0, windowWidth));
   }
 
 
@@ -35,15 +35,17 @@ function generator(x, y, couleur, position) {
   fill(120, 42, 42);
   ellipse(800, position, x, x);
   ellipse(850, 380, x, x);
-  //feuille
+  //leafs
   fill(0, couleur, 0);
-  translate(width / 2, 380);
   strokeWeight(2.2);
   stroke(couleur, couleur, couleur);
-  for (var i = 0; i < 10; i++) {
-    ellipse(x, 30, x, 80);
-    rotate(PI / 5);
-  }
+  triangle(width / 2, 300, 200, 300, 380, 200);
+  triangle(width / 2, 300, 400, 600, 500, 400);
+  triangle(width / 2, 300, 800, 300, 1000, 800);
+  triangle(width / 2, 300, 400, 600, 500, 400);
+
+
+
 
 
 }
