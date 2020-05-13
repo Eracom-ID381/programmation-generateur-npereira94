@@ -14,7 +14,8 @@ function draw() {
   // et si le timer est écoulé
   if (frameCount % (timer * 60) == 0 && !mouseIsPressed) {
     // Appel de notre fonction generator
-    generator(random(0, 300), height - 150, random(0, 300), random(0, 300));
+    background(255);
+    generator(random(0, 300), height - 150, random(0, 255), width - 300);
   }
 
 
@@ -22,25 +23,25 @@ function draw() {
 
 
 // Fonction avec quatres paramètres
-function generator(x, y, couleur) {
+function generator(x, y, couleur, position) {
   // fill utilise le paramètre de notre fonction
 
   //tronc
   noStroke();
-  fill(120, 42, 42);
+  fill(couleur, 42, 42);
   triangle(width / 2, 300, 700, 800, 780, 800);
   //coco
   noStroke();
   fill(120, 42, 42);
-  ellipse(800, 380, random(0, 70), random(0, 70));
-  ellipse(850, 380, random(0, 80), random(0, 80));
+  ellipse(800, position, x, x);
+  ellipse(850, 380, x, x);
   //feuille
-  fill(0, 100, 0);
-  translate(width / 2, 200);
+  fill(0, couleur, 0);
+  translate(width / 2, 380);
   strokeWeight(2.2);
-  stroke(11, x, 16);
+  stroke(couleur, couleur, couleur);
   for (var i = 0; i < 10; i++) {
-    ellipse(0, 30, 400, 80);
+    ellipse(x, 30, x, 80);
     rotate(PI / 5);
   }
 
