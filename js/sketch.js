@@ -41,8 +41,8 @@ function generator(x, y, couleur, position) {
   stroke(couleur, couleur, couleur);
   triangle(width / 2, 300, 200, 300, 380, 200);
   triangle(width / 2, 300, 400, 600, 500, 400);
-  triangle(width / 2, 300, 800, 300, 1000, 800);
-  triangle(width / 2, 300, 400, 600, 500, 400);
+  triangle(width / 2, 300, 1200, 600, 1100, 400);
+  triangle(width / 2, 300, 1200, 300, 1300, 200);
 
 
 
