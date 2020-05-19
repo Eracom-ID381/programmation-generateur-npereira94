@@ -17,8 +17,6 @@ function draw() {
     background(255);
     generator(random(0, 200), height - 150, random(0, 255), random(0, 500), random(1000, windowWidth), random(300, 800));
   }
-
-
 }
 
 
