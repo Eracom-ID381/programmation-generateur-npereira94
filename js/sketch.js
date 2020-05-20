@@ -2,6 +2,9 @@
 
 // une unité = 1 seconde
 let timer = 1;
+let tronc
+let leaf
+let coco
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
