@@ -9,6 +9,9 @@ let coco
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   rectMode(CENTER);
+  tronc = new Tronc();
+  leaf = new Leaf();
+  coco = new Coco();
 }
 
 function draw() {
@@ -46,12 +49,6 @@ function generator(x, y, couleur, leafleft, leafright, tronc) {
   triangle(width / 2, 300, 1200, 600, leafright, 400);
   triangle(width / 2, 300, 1200, 300, leafright, x);
   triangle(width / 2, 300, 1000, x, leafright, x);
-
-  //diane cube
-  /*rect(width / 2, height / 2, cube, cube)
-  triangle(width / 2 - cube, height / 2 - cube, width / 2 + cube, height / 2 - cube, width / 2 + 40, height / 2 - 40);
-  triangle(width / 2 - 25, height / 2 - 25, width / 2 - 5, height / 2 - 40, width / 2 + 40, height / 2 - 40);
-*/
 
 
 }
